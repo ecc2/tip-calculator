@@ -25,6 +25,7 @@ class ViewController: UIViewController {
         billAmountTextField.layer.cornerRadius = 10;
         billAmountTextField.layer.borderColor = UIColor.magenta.cgColor
         billAmountTextField.layer.borderWidth = 5.0
+        billAmountTextField.becomeFirstResponder()
     }
 
     @IBAction func calculateTip(_ sender: Any) {
@@ -36,10 +37,6 @@ class ViewController: UIViewController {
         let total = bill + tip
         tipAmountLabel.text = String(format: "$%.2f", tip)
         totalLabel.text = String(format: "$%.2f", total)
-    }
-    
-    @IBAction func onTap(_ sender: Any) {
-        view.endEditing(true)
     }
     
 }
